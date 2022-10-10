@@ -6,6 +6,11 @@ export default class Bishop extends Piece {
     }
 
     getAvailableMoves(board) {
-        return new Array(0);
+        const location = board.findPiece(this);
+
+        const bishopMovement = [];
+
+
+        return bishopMovement;
     }
 }
