@@ -9,24 +9,23 @@ export default class Pawn extends Piece {
         return new Array(0);
     }
 
+    function(movePawn) {
+    const currentSquare = board.findPiece(this);
+    const colour = this.player;
+    let moves = new Array();
+    
+    if (colour === player.WHITE) {
 
+    let targetRow = currentSquare.row;
+    targetRow++;
+    let targetColumn = currentSquare.col;
 
+    let position = new Square(targetRow, targetColumn)
 
-
-    /*movePawn(board, newSquare) {
-        let pawnSquare = currentSquare[row+1][col]
-        const currentSquare = board.findPiece(this);
-        board.movePiece(currentSquare, newSquare);
+    moves.push(position);
     }
-    */
-    movePawn(board) {
-        if (this.Player === WHITE) {
-        let pawnSquare = [currentSquare[row+1][col]]
-        this.moveTo(board, pawnSquare)
-        }
-        else {let pawnSquare = [currentSquare[row-1][col]]
-        this.moveTo(board, pawnSquare)
-        }
-    }
+}
+
+
 }
 
